@@ -1,9 +1,17 @@
-def factorial(num: int) -> int:
-    return 1 if num == 1 else num * factorial(num - 1)
+import array
+
+data = [9, 4, 6]
+
+
+def sums(nums: array) -> int:
+    if len(nums) > 0:
+        return nums.pop() + sums(nums)
+    else:
+        return 0
 
 
 def main():
-    result = factorial(9)
+    result = sums(data)
     print(result)
 
 
